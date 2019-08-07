@@ -6,7 +6,11 @@ Use this to download all elements of the dataset described in:
 Amgad M, Elfandy H, ..., Gutman DA, Cooper LAD. Structured crowdsourcing enables convolutional segmentation of histology images. Bioinformatics. 2019. doi: 10.1093/bioinformatics/btz083
 ```
 
-This will download the whole-slide images (WSI), annotation JSON files (coordinates), as well the masks. Steps are as follows:
+This data can be visualized in a public instance of the DSA at https://goo.gl/cNM4EL. Mask images derived from this data are used in training and validation are available at: goo.gl/UoUm9w, but are automatically downloaded by this script for convenience.
+
+This script will download the whole-slide images (WSI), annotation JSON files (coordinates), as well the masks. 
+
+Steps are as follows:
 
 **Step 1: Instal requirements**
   
@@ -45,3 +49,11 @@ This will download the whole-slide images (WSI), annotation JSON files (coordina
     `bash ./wsis/download_wsis.sh`
   
   to download the full whole-slide images.
+  
+```
+**IMPORTANT: How to use masks**
+
+Each mask is a .png image, where pixel values encode region class membership. The meaning of ground truth encoded can be found at the file gtruth_codes.tsv found in the same directory. The name of each mask encodes all necessary information to extract the corresponding RGB images from TCGA slides.
+
+Please be aware that some of the regions of interest are rotated, and that zero pixels represent regions outside the region of interest (“don’t care” class) and should be assigned zero-weight during model training; they do **NOT** represent an “other” class. This rotation was done in the interest of capturing adjacent, yet diverse histologic patterns with minimal annotator fatigue.
+```
