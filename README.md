@@ -28,9 +28,13 @@ This will download the whole-slide images (WSI), annotation JSON files (coordina
   `python download_crowdsource_dataset.py`
   
   The script will create the following sub-directories: 
+  
     |_ wsis : where whole-slide images will be saved
+    
     |_ annotations : where JSON annotations will be saves for each slide
+    
     |_ masks : where the ground truth masks to use for training and validation are saved
+    
     |_ logs : in case anythign goes wrong
 
 **Step 5: Run the auto-generated WSI script**
