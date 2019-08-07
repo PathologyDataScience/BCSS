@@ -40,6 +40,7 @@ This will download the whole-slide images (WSI), annotation JSON files (coordina
   
   On Windows:
     `./wsis/download_wsis.bat`
+    
   On Mac or Linux:
     `bash ./wsis/download_wsis.sh`
   
