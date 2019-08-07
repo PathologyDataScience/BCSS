@@ -12,7 +12,7 @@ https://figshare.com/account/projects/55481/articles/7193138
 
 Masks are automatically downloaded by this script for convenience.
 
-This script will download the whole-slide images (WSI), annotation JSON files (coordinates), as well the masks. 
+This script will download the whole-slide images (WSI), annotation JSON files (coordinates), as well the masks and corresponding RGB images. 
 
 Steps are as follows:
 
