@@ -87,7 +87,7 @@ existing_slides = set([
 slide_list = list(set(slides.keys()) - existing_slides)
 
 # %%===========================================================================
-# Create download shell script
+# Create WSI download shell script
 # =============================================================================
 
 # bat script if windows, else bash script
