@@ -23,8 +23,7 @@ import wget
 APIURL = 'http://demo.kitware.com/histomicstk/api/v1/'
 source_folder_id = '5bbdeba3e629140048d017bb'
 
-#SAVEPATH = CWD
-SAVEPATH = 'C:\\Users\\tageldim\\Desktop\\Amgadetal2019-Dataset\\'
+SAVEPATH = CWD
 
 # %%===========================================================================
 # Methods
