@@ -15,6 +15,10 @@ import json
 import girder_client
 import datetime
 import wget
+from io import BytesIO
+from PIL import Image
+Image.MAX_IMAGE_PIXELS = 1000000000
+import csv
 
 # %%==========================================================
 # Params
@@ -50,12 +54,21 @@ def printNlog(msg, level='info'):
   else:
     pass
 
+def get_image_from_htk_response(resp):
+    """Given a girder response, get np array image"""        
+    image_content = BytesIO(resp.content)
+    image_content.seek(0)
+    Image.open(image_content)
+    image = Image.open(image_content)
+    return image
+
 # %%===========================================================================
 # Ground work
 # =============================================================================
 
 # create directories
-savepaths = create_directory_structure(['wsis','annotations','masks','logs'])
+savepaths = create_directory_structure(
+        ['wsis','annotations','masks','images', 'logs'])
 
 # configure logger
 now = str(datetime.datetime.now()).replace(' ', '_').replace(':', '_')
@@ -128,6 +141,39 @@ printNlog("Downloading masks to %s" % savepaths['masks'])
 mask_link = 'https://ndownloader.figshare.com/articles/7193138/versions/1'
 wget.download(mask_link, savepaths['masks'])
 
+# %%===========================================================================
+# Download RGB images
+# =============================================================================
+
+sldid = 0
+with open('./roiBounds.csv', newline='') as csvfile:
+    reader = csv.DictReader(csvfile)    
+    for row in reader:
+        
+        sldid += 1
+        slide_name = row[''][:12]
+        
+        printNlog("Downloading RGB image: Slide %d of %d (%s)" % (
+                sldid+1, len(slide_list), slide_name))
+        
+        xmin = int(float(row['xmin'])) 
+        ymin = int(float(row['ymin']))
+        # Get RGB from whol slide
+        getStr = "/item/%s/tiles/region?left=%d&right=%d&top=%d&bottom=%d" % (
+          slides[slide_name]['_id'], 
+          xmin, int(float(row['xmax'])), ymin, int(float(row['ymax'])))
+        resp  = gc.get(getStr, jsonResp=False)
+        rgb = get_image_from_htk_response(resp)
+        # save RGB
+        xmin = int(float(row['xmin'])) 
+        ymin = int(float(row['ymin']))
+        rgb.save(os.path.join(savepaths['images'], "%s_xmin%d_ymin%d_.png" % (
+                row[''], xmin, ymin)))
+        
+# %%===========================================================================
+# Done
+# =============================================================================
+        
 printNlog("DONE.")
 printNlog("""
 Now please run the batch or shell script from the command line using the 
@@ -138,7 +184,3 @@ Mac or Linux:
     bash %s
 to download the full whole-slide images.
 """ % (savepaths['wsi_script'], savepaths['wsi_script']))
-
-# %%===========================================================================
-# 
-# =============================================================================

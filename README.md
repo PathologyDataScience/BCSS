@@ -6,7 +6,11 @@ Use this to download all elements of the dataset described in:
 Amgad M, Elfandy H, ..., Gutman DA, Cooper LAD. Structured crowdsourcing enables convolutional segmentation of histology images. Bioinformatics. 2019. doi: 10.1093/bioinformatics/btz083
 ```
 
-This data can be visualized in a public instance of the DSA at https://goo.gl/cNM4EL. Mask images derived from this data are used in training and validation are available at: goo.gl/UoUm9w, but are automatically downloaded by this script for convenience.
+This data can be visualized in a public instance of the DSA at https://goo.gl/cNM4EL. Mask images derived from this data are used in training and validation are available at: 
+
+https://figshare.com/account/projects/55481/articles/7193138
+
+Masks are automatically downloaded by this script for convenience.
 
 This script will download the whole-slide images (WSI), annotation JSON files (coordinates), as well the masks. 
 
@@ -14,7 +18,7 @@ Steps are as follows:
 
 **Step 1: Instal requirements**
   
-  `pip install girder_client girder-client wget`
+  `pip install girder_client girder-client wget pillow`
   
 **Step 2: Create a free account on the HistomicsTK Kitware instance**
   
@@ -36,6 +40,7 @@ Steps are as follows:
     |_ wsis : where whole-slide images will be saved  
     |_ annotations : where JSON annotations will be saves for each slide
     |_ masks : where the ground truth masks to use for training and validation are saved
+    |_ images: where RGB images corresponding to masks are saved
     |_ logs : in case anythign goes wrong
 
 **Step 5: Run the auto-generated WSI script**
