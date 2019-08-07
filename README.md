@@ -50,8 +50,9 @@ Steps are as follows:
   
   to download the full whole-slide images.
   
+-------------------------------------------------
 
-**IMPORTANT: How to use masks**
+**IMPORTANT NOTE: How to use masks**
 
 Each mask is a .png image, where pixel values encode region class membership. The meaning of ground truth encoded can be found at the file gtruth_codes.tsv found in the same directory. The name of each mask encodes all necessary information to extract the corresponding RGB images from TCGA slides.
 
