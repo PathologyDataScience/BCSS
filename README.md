@@ -14,7 +14,7 @@ Steps are as follows:
 
 **Step 1: Instal requirements**
   
-  `pip install girder_client wget`
+  `pip install girder_client girder-client wget`
   
 **Step 2: Create a free account on the HistomicsTK Kitware instance**
   
