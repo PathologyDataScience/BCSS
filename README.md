@@ -2,7 +2,7 @@
 
 Use this to download all elements of the dataset described in: 
 
-_Amgad M, Elfandy H, ..., Gutman DA, Cooper LAD. Structured crowdsourcing enables convolutional segmentation of histology images. Bioinformatics. 2019. doi: 10.1093/bioinformatics/btz083
+**_Amgad M, Elfandy H, ..., Gutman DA, Cooper LAD. Structured crowdsourcing enables convolutional segmentation of histology images. Bioinformatics. 2019. doi: 10.1093/bioinformatics/btz083_**
 
 This data can be visualized in a public instance of the DSA at https://goo.gl/cNM4EL. Mask images derived from this data are used in training and validation are available at: 
 
