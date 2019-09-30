@@ -17,19 +17,13 @@ Steps are as follows:
 **Step 1: Instal requirements**
   
   `pip install girder_client girder-client wget pillow`
-  
-**Step 2: Create a free account on the HistomicsTK Kitware instance**
-  
-  The process takes only one minute. You go to:
-  http://demo.kitware.com/histomicstk/histomicstk
-  Then click 'register' on the top right corner and fill in the details.
 
-**Step 3: Set download path**
+**Step 2: Set download path**
   
   Simply edit the variable SAVEPATH at the top of the download_crowdsource_dataset.py script
   The default behavior is to create directories in the save folder where this repo is located.
 
-**Step 4: Run the download script**
+**Step 3: Run the download script**
   
   `python download_crowdsource_dataset.py`
   
@@ -41,7 +35,7 @@ Steps are as follows:
     |_ images: where RGB images corresponding to masks are saved
     |_ logs : in case anythign goes wrong
 
-**Step 5: Run the auto-generated WSI script**
+**Step 4: Run the auto-generated WSI script**
 
   Run the batch or shell script from the command line using the following command:
   
