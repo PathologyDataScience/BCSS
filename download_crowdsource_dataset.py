@@ -78,13 +78,14 @@ logging.basicConfig(
 printNlog("STARTED.")
 
 # Connect to API
-printNlog("""Enter login information below. 
-If you don't have an account, register for free at:
-http://demo.kitware.com/histomicstk/histomicstk
-It only takes a minute.
-""")
-gc= girder_client.GirderClient(apiUrl = APIURL)
-gc.authenticate(interactive=True)
+#printNlog("""Enter login information below. 
+#If you don't have an account, register for free at:
+#http://demo.kitware.com/histomicstk/histomicstk
+#It only takes a minute.
+#""")
+gc = girder_client.GirderClient(apiUrl = APIURL)
+# gc.authenticate(interactive=True)
+gc.authenticate(apiKey='GDetOb3GVvZfMImjPf8lf1yya4dbcaTfDfq9o62v')
 
 # Get list of slides to download
 resp = gc.get("item?folderId=%s&limit=1000000" % source_folder_id)
