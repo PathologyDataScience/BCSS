@@ -51,6 +51,19 @@ Steps are as follows:
 
 **IMPORTANT NOTE: How to use masks**
 
-Each mask is a .png image, where pixel values encode region class membership. The meaning of ground truth encoded can be found at the file gtruth_codes.tsv found in the same directory. The name of each mask encodes all necessary information to extract the corresponding RGB images from TCGA slides.
+- Each mask is a .png image, where pixel values encode region class membership. The meaning of ground truth encoded can be found at the file gtruth_codes.tsv found in the same directory.
 
-Please be aware that some of the regions of interest are rotated, and that zero pixels represent regions outside the region of interest (“don’t care” class) and should be assigned zero-weight during model training; they do **NOT** represent an “other” class. This rotation was done in the interest of capturing adjacent, yet diverse histologic patterns with minimal annotator fatigue.
+- The name of each mask encodes all necessary information to extract the corresponding RGB images from TCGA slides. For convenience, RGBs are also downloaded using the code used here. 
+
+- **[CRITICAL] -** Please be aware that zero pixels represent regions outside the region of interest (“don’t care” class) and should be assigned zero-weight during model training; they do **NOT** represent an “other” class.
+
+- The masks and RGB images here are at **base (scan) magnification**. For most slides, this is 40x, for others it is 20x. For convenience the file `slide_magnifications_Amgadetal2019.csv` included here contains the magnifications for all slides. IF you want to use the masks to train models at a particular magnification, use resizing. For example, say the mask is at 40x and you want to train at 20x, use something like:
+
+```python
+from skimage.transform import resize
+f = 40. / 20.
+new_shape = [int(j/f) for j in mask.shape]
+resized_mask = resize(
+    mask, output_shape=new_shape, order=0, preserve_range=True)
+```
+Do the same for the RGB images of course.
