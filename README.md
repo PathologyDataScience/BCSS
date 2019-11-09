@@ -6,7 +6,7 @@ Use this to download all elements of the dataset described in:
 
 This data can be visualized in a public instance of the DSA at https://goo.gl/cNM4EL. Mask images derived from this data are used in training and validation are available at: 
 
-https://figshare.com/account/projects/55481/articles/7193138
+https://figshare.com/articles/Structured_Crowdsourcing_Enables_Convolutional_Segmentation_of_Histology_Images/7193138
 
 Masks are automatically downloaded by this script for convenience.
 
