@@ -17,8 +17,8 @@ Steps are as follows:
 **Step 0: Clone this repo**
 
 ```bash
-git clone https://github.com/CancerDataScience/CrowdsourcingDataset-Amgadetal2019
-cd CrowdsourcingDataset-Amgadetal2019
+$ git clone https://github.com/CancerDataScience/CrowdsourcingDataset-Amgadetal2019
+$ cd CrowdsourcingDataset-Amgadetal2019
 ```
 
 **Step 1: Instal requirements**
