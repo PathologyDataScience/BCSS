@@ -89,7 +89,7 @@ def download_rgbs_and_masks():
             sldid += 1
             xmin = int(float(row['xmin']))
             ymin = int(float(row['ymin']))
-
+            
             if 'images' in cf.PIPELINE:
                 printNlog("Downloading RGB image: Slide %d of %d (%s)" % (
                     sldid, n_slides, slide_name))
@@ -105,16 +105,21 @@ def download_rgbs_and_masks():
                 if cf.MPP is not None:  # Specific microns-per-pixel
                     mm = 0.001 * cf.MPP
                     getStr += "&mm_x=%.4f&mm_y=%.4f" % (mm, mm)
+                    append_str = "MPP-%.4f" % cf.MPP
 
                 elif cf.MAG is not None:  # Specific magnification
                     getStr += "&magnification=%.2f" % cf.MAG
+                    append_str = "MAG-%.2f" % cf.MAG
+
+                else:
+                    append_str = "MAG-0"
 
                 resp = cf.gc.get(getStr, jsonResp=False)
                 rgb = get_image_from_htk_response(resp)
                 rgb.save(
                     os.path.join(
-                        cf.savepaths['images'], "%s_xmin%d_ymin%d_.png"
-                        % (row[''], xmin, ymin)))
+                        cf.savepaths['images'], "%s_xmin%d_ymin%d_%s.png"
+                        % (row[''], xmin, ymin, append_str)))
 
             if 'masks' in cf.PIPELINE:
                 printNlog("Downloading mask: Slide %d of %d (%s)" % (
@@ -128,10 +133,12 @@ def download_rgbs_and_masks():
                     mask = np.uint8(resize(
                         mask, output_shape=np.array(rgb).shape[:2],
                         order=0, preserve_range=True))
+                else:
+                    append_str = "MAG-0"
 
                 imwrite(im=mask, uri=os.path.join(
-                    cf.savepaths['masks'], "%s_xmin%d_ymin%d_.png"
-                    % (row[''], xmin, ymin)))
+                    cf.savepaths['masks'], "%s_xmin%d_ymin%d_%s.png"
+                    % (row[''], xmin, ymin, append_str)))
 
 # =============================================================================
 
