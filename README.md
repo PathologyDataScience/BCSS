@@ -29,13 +29,10 @@ $ cd CrowdsourcingDataset-Amgadetal2019
   
   If you like, you may edit various download configurations. Of note:
   
-  `SAVEPATH` - where everything will be saved
-  
-  `MPP` - microns per pixel for RGBs and masks (preferred, default is 0.23)
-  
-  `MAG` - magnification (overridden by `MPP` if `MPP` is set. default is None)
-  
-  `PIPELINE` - what elements to download?
+  - `SAVEPATH` - where everything will be saved
+  - `MPP` - microns per pixel for RGBs and masks (preferred, default is 0.23)
+  - `MAG` - magnification (overridden by `MPP` if `MPP` is set. default is None)
+  - `PIPELINE` - what elements to download?
 
 **Step 3: Run the download script**
   
