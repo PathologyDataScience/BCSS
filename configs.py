@@ -1,11 +1,11 @@
 APIURL = 'http://demo.kitware.com/histomicstk/api/v1/'
-apiKey = 'GDetOb3GVvZfMImjPf8lf1yya4dbcaTfDfq9o62v'  # None
+# apiKey = None  # interactive login
+apiKey = 'GDetOb3GVvZfMImjPf8lf1yya4dbcaTfDfq9o62v'
 
 source_folder_id = '5bbdeba3e629140048d017bb'
 
-# SAVEPATH = './'
-SAVEPATH = '/home/mtageld/Desktop/cTME/results/tmp/'
-ROIBOUNDSPATH = './roiBounds.csv'
+SAVEPATH = './'
+ROIBOUNDSPATH = './meta/roiBounds.csv'
 
 # Set either MPP or MAG.
 # If both are None, base (scan) magnification is used.
