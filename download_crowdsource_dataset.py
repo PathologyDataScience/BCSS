@@ -132,7 +132,7 @@ def download_rgbs_and_masks():
                 if 'images' in cf.PIPELINE:
                     mask = np.uint8(resize(
                         mask, output_shape=np.array(rgb).shape[:2],
-                        order=0, preserve_range=True))
+                        order=0, preserve_range=True, anti_aliasing=False))
                 else:
                     append_str = "MAG-0"
 
