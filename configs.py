@@ -11,7 +11,7 @@ ROIBOUNDSPATH = './meta/roiBounds.csv'
 # If both are None, base (scan) magnification is used.
 
 # Microns-per-pixel -- best use this
-# MPP of 0.23 is "standardized" at 20x using original Aperio scanners
+# MPP of 0.23 is "standardized" at 40x using original Aperio scanners
 # MPP = None
 MPP = 0.23
 
