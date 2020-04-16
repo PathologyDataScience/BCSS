@@ -1,6 +1,6 @@
 APIURL = 'http://demo.kitware.com/histomicstk/api/v1/'
-# apiKey = None  # interactive login
-apiKey = 'n0Kp1ez8YOnOiWNoACryzeBlIzbUDW3iOD2DmPLI'
+apiKey = None  # interactive login
+# apiKey = 'n0Kp1ez8YOnOiWNoACryzeBlIzbUDW3iOD2DmPLI'
 
 source_folder_id = '5bbdeba3e629140048d017bb'
 
@@ -24,9 +24,9 @@ PIPELINE = (
     'images',
     'masks',
     'annotations',
-    'wsis'
+#    'wsis'
 )
 
 # if you only want to download data for specific slides
-SLIDES_TO_KEEP = None
-# SLIDES_TO_KEEP = ['TCGA-BH-A1FC', 'TCGA-A8-A07C', 'TCGA-A1-A0SK']
+# SLIDES_TO_KEEP = None
+SLIDES_TO_KEEP = ['TCGA-BH-A1FC', 'TCGA-A8-A07C', 'TCGA-A1-A0SK']
