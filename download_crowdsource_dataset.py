@@ -168,8 +168,11 @@ def create_wsi_download_script():
 
     # Add commands to batch or bash script
     printNlog("Adding download commands to %s" % cf.savepaths['wsi_script'])
-    resp = cf.gc.post('api_key')
-    apikey = resp['key']
+    if cf.apiKey is not None:
+        apikey = cf.apiKey
+    else:
+        resp = cf.gc.post('api_key')
+        apikey = resp['key']
     for slide_name in cf.slide_list:
         command_base = \
             "girder-client --api-url %s --api-key %s download %s %s" % (

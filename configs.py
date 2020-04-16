@@ -1,6 +1,6 @@
 APIURL = 'http://demo.kitware.com/histomicstk/api/v1/'
 # apiKey = None  # interactive login
-apiKey = 'GDetOb3GVvZfMImjPf8lf1yya4dbcaTfDfq9o62v'
+apiKey = 'n0Kp1ez8YOnOiWNoACryzeBlIzbUDW3iOD2DmPLI'
 
 source_folder_id = '5bbdeba3e629140048d017bb'
 
