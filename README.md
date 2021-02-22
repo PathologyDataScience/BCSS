@@ -1,4 +1,4 @@
-# CrowdsourcingDataset-Amgadetal2019
+# Structured crowdsourcing enables convolutional segmentation of histology images
 
 Use this to download all elements of the dataset described in: 
 
