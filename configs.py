@@ -23,10 +23,10 @@ MAG = None
 PIPELINE = (
     'images',
     'masks',
-    'annotations',
-#    'wsis'
+    # 'annotations',
+    # 'wsis'
 )
 
 # if you only want to download data for specific slides
-# SLIDES_TO_KEEP = None
-SLIDES_TO_KEEP = ['TCGA-BH-A1FC', 'TCGA-A8-A07C', 'TCGA-A1-A0SK']
+SLIDES_TO_KEEP = None
+# SLIDES_TO_KEEP = ['TCGA-BH-A1FC', 'TCGA-A8-A07C', 'TCGA-A1-A0SK']
