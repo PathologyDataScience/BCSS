@@ -73,5 +73,6 @@ would be at `MAG` magnification. If both are set to `None`, then they will be at
 
 -------------------------------------------------
 
-This dataset is licensed by a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). 
+### Licensing
+This dataset is licensed under a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). 
 Please cite our paper if you use the data.
