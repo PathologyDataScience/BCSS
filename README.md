@@ -70,3 +70,8 @@ $ cd CrowdsourcingDataset-Amgadetal2019
 
 - The RGBs and corresponding masks will be at the set `MPP` resolution. If `MPP` was set to `None`, then they
 would be at `MAG` magnification. If both are set to `None`, then they will be at the base (scan) magnification.
+
+-------------------------------------------------
+
+This dataset is licensed by a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). 
+Please cite our paper if you use the data.
