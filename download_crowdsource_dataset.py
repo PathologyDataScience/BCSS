@@ -197,20 +197,14 @@ def main():
         download_jsons()
 
     if 'wsis' in cf.PIPELINE:
-        create_wsi_download_script()
+        raise NotImplementedError(
+            "Please do not download the whole-slide image from the server!\n"
+            "Downloading WSIs creates high traffic and slows down annotation "
+            "viewing for everyone. Instead, you should download the images "
+            "and masks at your desired magnification/resolution."
+        )
 
     printNlog("DONE.")
-    if 'wsis' in cf.PIPELINE:
-        printNlog("""
-            Now please run the batch or shell script from the command line
-            using the following command:
-            Windows:
-                %s
-            Mac or Linux:
-                bash %s
-            to download the full whole-slide images.
-            """ % (cf.savepaths['wsi_script'], cf.savepaths['wsi_script']))
-
 
 # =============================================================================
 
