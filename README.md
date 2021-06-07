@@ -32,7 +32,6 @@ You can use [this link](https://drive.google.com/drive/folders/1zqbdkQF8i5cEmZOG
 Use this to download all elements of the dataset using the command line. 
 
 This script will download any or all of the following:
-- whole-slide images (WSI)
 - annotation JSON files (coordinates)
 - masks
 - RGB images
@@ -70,21 +69,6 @@ $ cd CrowdsourcingDataset-Amgadetal2019
     |_ masks : where the ground truth masks to use for training and validation are saved
     |_ images: where RGB images corresponding to masks are saved
     |_ logs : in case anythign goes wrong
-
-**Step 4 (NOT RECOMMENDED!!): Run the auto-generated WSI script**
-
-  Run the batch or shell script from the command line using the following command:
-  
-  On Windows:
-    `./wsis/download_wsis.bat`
-    
-  On Mac or Linux:
-    `bash ./wsis/download_wsis.sh`
-  
-  to download the full whole-slide images.
-  
-  ***Please AVOID this step as this puts heavy traffic on the server! Instead, you should rely on the RGB images corresponding to each
-  mask instead! Thank you!***
   
 -------------------------------------------------
 
