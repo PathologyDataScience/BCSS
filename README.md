@@ -4,7 +4,7 @@ This repo contains the necessary information and download instructions to downlo
 
 ***_Amgad M, Elfandy H, ..., Gutman DA, Cooper LAD. Structured crowdsourcing enables convolutional segmentation of histology images. Bioinformatics. 2019. doi: 10.1093/bioinformatics/btz083_***
 
-This data can be visualized in a public instance of the DSA at https://goo.gl/cNM4EL. 
+This data can be visualized in a public instance of the DSA at [this link](https://demo.kitware.com/histomicstk/histomicstk#?image=5bbdee62e629140048d01b0d&bounds=-42540%2C0%2C127990%2C84350%2C0). If you click the “eye” image icon in the Annotations panel on the right side of the screen, you’ll see the results of a collaborative annotation.
 
 -------------------------------------------------
 
