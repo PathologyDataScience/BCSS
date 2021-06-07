@@ -1,10 +1,35 @@
 # Structured crowdsourcing enables convolutional segmentation of histology images
 
-Use this to download all elements of the dataset described in: 
+This repo contains the necessary information and download instructions to download the dataset associated with the paper:
 
 ***_Amgad M, Elfandy H, ..., Gutman DA, Cooper LAD. Structured crowdsourcing enables convolutional segmentation of histology images. Bioinformatics. 2019. doi: 10.1093/bioinformatics/btz083_***
 
 This data can be visualized in a public instance of the DSA at https://goo.gl/cNM4EL. 
+
+-------------------------------------------------
+
+## Usage
+
+- Each mask is a .png image, where pixel values encode region class membership. The meaning of ground truth encoded can be found at the file `./meta/gtruth_codes.tsv`.
+
+- The name of each mask encodes all necessary information to extract the corresponding RGB images from TCGA slides. For convenience, RGBs are also downloaded using the code used here. 
+
+- **[CRITICAL] -** Please be aware that zero pixels represent regions outside the region of interest (“don’t care” class) and should be assigned zero-weight during model training; they do **NOT** represent an “other” class.
+
+- The RGBs and corresponding masks will be at the set `MPP` resolution. If `MPP` was set to `None`, then they
+would be at `MAG` magnification. If both are set to `None`, then they will be at the base (scan) magnification.
+
+-------------------------------------------------
+
+## Download (Single link - convenient)  
+
+You can use [this link](https://drive.google.com/drive/folders/1zqbdkQF8i5cEmZOGmbdQm-EP8dRYtvss?usp=sharing) to download the dataset at 0.25 MPP resolution.
+
+-------------------------------------------------
+
+## Download (command line - flexible)
+
+Use this to download all elements of the dataset using the command line. 
 
 This script will download any or all of the following:
 - whole-slide images (WSI)
@@ -46,7 +71,7 @@ $ cd CrowdsourcingDataset-Amgadetal2019
     |_ images: where RGB images corresponding to masks are saved
     |_ logs : in case anythign goes wrong
 
-**Step 4: Run the auto-generated WSI script**
+**Step 4 (NOT RECOMMENDED!!): Run the auto-generated WSI script**
 
   Run the batch or shell script from the command line using the following command:
   
@@ -58,21 +83,11 @@ $ cd CrowdsourcingDataset-Amgadetal2019
   
   to download the full whole-slide images.
   
+  ***Please AVOID this step as this puts heavy traffic on the server! Instead, you should rely on the RGB images corresponding to each
+  mask instead! Thank you!***
+  
 -------------------------------------------------
 
-**IMPORTANT NOTE: How to use masks**
-
-- Each mask is a .png image, where pixel values encode region class membership. The meaning of ground truth encoded can be found at the file `./meta/gtruth_codes.tsv`.
-
-- The name of each mask encodes all necessary information to extract the corresponding RGB images from TCGA slides. For convenience, RGBs are also downloaded using the code used here. 
-
-- **[CRITICAL] -** Please be aware that zero pixels represent regions outside the region of interest (“don’t care” class) and should be assigned zero-weight during model training; they do **NOT** represent an “other” class.
-
-- The RGBs and corresponding masks will be at the set `MPP` resolution. If `MPP` was set to `None`, then they
-would be at `MAG` magnification. If both are set to `None`, then they will be at the base (scan) magnification.
-
--------------------------------------------------
-
-### Licensing
+## Licensing
 This dataset is licensed under a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). 
 Please cite our paper if you use the data.
