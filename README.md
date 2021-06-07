@@ -64,10 +64,10 @@ $ cd CrowdsourcingDataset-Amgadetal2019
   
   The script will create the following sub-directories in `SAVEPATH`: 
   
-    |_ wsis : where whole-slide images will be saved  
     |_ annotations : where JSON annotations will be saves for each slide
     |_ masks : where the ground truth masks to use for training and validation are saved
     |_ images: where RGB images corresponding to masks are saved
+    |_ wsis (legacy) : Ignore this. No longer supported.
     |_ logs : in case anythign goes wrong
   
 -------------------------------------------------
