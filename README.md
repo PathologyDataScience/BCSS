@@ -21,7 +21,7 @@ would be at `MAG` magnification. If both are set to `None`, then they will be at
 
 -------------------------------------------------
 
-## Download (Single link - convenient)  
+## Download (single link - convenient)  
 
 You can use [this link](https://drive.google.com/drive/folders/1zqbdkQF8i5cEmZOGmbdQm-EP8dRYtvss?usp=sharing) to download the dataset at 0.25 MPP resolution.
 
