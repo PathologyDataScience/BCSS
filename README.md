@@ -32,7 +32,7 @@ You can use [this link](https://drive.google.com/drive/folders/1zqbdkQF8i5cEmZOG
 Use this to download all elements of the dataset using the command line. 
 
 This script will download any or all of the following:
-- annotation JSON files (coordinates)
+- annotation JSON files (coordinates relative to WSI base resolution)
 - masks
 - RGB images
 
