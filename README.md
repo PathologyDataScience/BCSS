@@ -1,4 +1,4 @@
-# Structured crowdsourcing enables convolutional segmentation of histology images
+# Breast Cancer Semantic Segmentation (BCSS) dataset
 
 This repo contains the necessary information and download instructions to download the dataset associated with the paper:
 
