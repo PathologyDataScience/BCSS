@@ -72,6 +72,9 @@ $ cd CrowdsourcingDataset-Amgadetal2019
   
 -------------------------------------------------
 
-## Licensing
-This dataset is licensed under a [CC BY 4.0 license](https://creativecommons.org/licenses/by/4.0/). 
-Please cite our paper if you use the data.
+## Dataset Licensing
+This dataset itself is licensed under a [CC0 1.0 Universal (CC0 1.0) license](https://creativecommons.org/publicdomain/zero/1.0/). 
+We would appreciate it if you cite our paper if you use the data.
+
+## Code licensing
+Thise codebase is licensed with an MIT license.
