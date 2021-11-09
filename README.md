@@ -70,7 +70,6 @@ $ cd CrowdsourcingDataset-Amgadetal2019
     |_ wsis (legacy) : Ignore this. No longer supported.
     |_ logs : in case anythign goes wrong
   
--------------------------------------------------
 
 ## Dataset Licensing
 This dataset itself is licensed under a [CC0 1.0 Universal (CC0 1.0) license](https://creativecommons.org/publicdomain/zero/1.0/). 
