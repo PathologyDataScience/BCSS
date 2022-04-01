@@ -17,7 +17,7 @@ This data can be visualized in a public instance of the Digital Slide Archive at
 - The RGBs and corresponding masks will be at the set `MPP` resolution. If `MPP` was set to `None`, then they
 would be at `MAG` magnification. If both are set to `None`, then they will be at the base (scan) magnification.
 
-## Tensorflow model weights
+## Reproducibility
 
 To reproduce the accuracy results presented in the paper, please be sure to read the paper methodology, including the supplementary methods section. Some details are also re-iterated [here](https://bcsegmentation.grand-challenge.org/Baseline/) for convenience (including train-test splits and class grouping). [This Github repository](https://github.com/kheffah/tensorflow_FCN8Workflow) contains the code we used, and the trained VGG16-FCN8 tensorflow model weights can be downloaded at [this link](https://drive.google.com/drive/folders/1mSd3ZG1lnno_RuTHQXSU0GRAhtR21yIy?usp=sharing).
 
