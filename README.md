@@ -6,8 +6,6 @@ This repo contains the necessary information and download instructions to downlo
 
 This data can be visualized in a public instance of the Digital Slide Archive at [this link](https://demo.kitware.com/histomicstk/histomicstk#?image=5bbdee62e629140048d01b0d&bounds=-42540%2C0%2C127990%2C84350%2C0). If you click the “eye” image icon in the Annotations panel on the right side of the screen, you’ll see the results of a collaborative annotation.
 
--------------------------------------------------
-
 ## Usage
 
 - Each mask is a .png image, where pixel values encode region class membership. The meaning of ground truth encoded can be found at the file `./meta/gtruth_codes.tsv`.
@@ -19,13 +17,15 @@ This data can be visualized in a public instance of the Digital Slide Archive at
 - The RGBs and corresponding masks will be at the set `MPP` resolution. If `MPP` was set to `None`, then they
 would be at `MAG` magnification. If both are set to `None`, then they will be at the base (scan) magnification.
 
--------------------------------------------------
+## Tensorflow model weights
+
+To reproduce the accuracy results presented in the paper, please be sure to read the paper methodology, including the supplementary methods section. Some details are also re-iterated [here](https://bcsegmentation.grand-challenge.org/Baseline/) for convenience (including train-test splits and class grouping). [This Github repository](https://github.com/kheffah/tensorflow_FCN8Workflow) contains the code we used, and the trained VGG16-FCN8 tensorflow model weights can be downloaded at [this link](https://drive.google.com/drive/folders/1mSd3ZG1lnno_RuTHQXSU0GRAhtR21yIy?usp=sharing).
+
 
 ## Download (single link - convenient)  
 
 You can use [this link](https://drive.google.com/drive/folders/1zqbdkQF8i5cEmZOGmbdQm-EP8dRYtvss?usp=sharing) to download the dataset at 0.25 MPP resolution.
 
--------------------------------------------------
 
 ## Download (command line - flexible)
 
